@@ -185,11 +185,11 @@
                    	 
     \section{Taylor-Reihe}
         Die allgemeine Form der Taylor-Reihe einer Funktion $f(x)$, welche mindestens n-mal differenzierbar ist, ist: \\
-        $T_n(x) = \sum_{k=0}^{n} \frac{f^{(n)}(x*)}{k!}(x - x*)^k$.
+        $T_n(x, x_e) = \sum_{k=0}^{n} \frac{f^{(n)}(x_e)}{k!}(x - x_e)^k$.
         \\ \\
         $T_1(x)$ ist die Tangente an der Stelle $x*$.
         Das Restglied $R_n$ wird durch Differenz der Funktion und dem Taylorpolynom gebildet. $R_n(x) = f(x) - T_n(x)$
-        $R_n(x,x_n) = \frac{|f^{(n-1)|}}{(n+1)!}*|x-x_e|^n+1 $
+        $R_n(x,x_ne) = \frac{f^{n+1}(c)}{(n+1)!}*(x-x_e)^{n+1} $
         
     \section{Integralrechnung}
         $e^{Foo}$ u.ä. muss vorher substituiert werden!\\
