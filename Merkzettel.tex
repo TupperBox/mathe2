@@ -17,7 +17,7 @@
     bindingoffset=5mm
 }
 
-\author{Johann Wagner}
+\author{Johann Wagner, Kai Seidensticker}
 
 
 \newcommand{\limTo}[1]{ \lim\limits_{x \rightarrow #1}}
@@ -90,6 +90,33 @@
             \subsubsection{Quotientenkriterium}
                 Wenn es eine Zahl $q < 1$ und ein $k_0 \ge \mathbb{N}_0$ gibt, so dass $\left|\frac{a_{k+1}}{a_k} \right| \le q$ für alle $k > k_0.$ \\
                 Wenn unter den gleichen Vorraussetzungen $\left|\frac{a_{k+1}}{a_k} \right| > 1$ gilt, dann ist die Reihe divergent.
+    \section{Differenzialrechnung}
+    	\subsection{Differenzierbarkeit}
+                  Eine Funktion $f(x)$ ist differenzierbar an der Stelle $x*$, wenn der Grenzwert von $\limFromTo{x*}{x} \frac{f(x) - f(x*)}{x - x*}$ existiert. 
+                  \\ \\
+    	\subsection{typische Ableitungen}
+    	   \begin{multicols}{2}		
+    	   		$(x)' = 1$ \\
+    			$(ax)' = a$ \\
+    			$(ax^2)' = 2ax$ \\
+    			$(\frac{1}{x})' = \frac{1}{x^2}$ \\
+    			$(\sqrt[]{x})' = \frac{1}{2\sqrt[]{x}}$ \\
+    			$(ax^b)' = abx^(b-1)$ \\
+    			$(e^x)' = e^x $ \\
+    			$(a^x)' = aloga $ \\
+    			$ln(x)' = \frac{1}{x}$ \\
+    		 	$(\sin x) = \cos x$ \\
+    		 	$(\cos x) = -\sin x$ \\
+    		 	$(\tan x) = \frac{1}{(\cos x)^2}$ \\ 
+    		 	\end{multicols}
+      \subsection{Verknüpfungsfunktionen}
+      			Summenregel: $(f(x) + g(x))' = f(x)' + g(x)' $ \\ 
+      			Produktregel: $(f(x)g(x))' = f(x)'g(x)+g(x)'f(x)' $ \\
+      			Quotientenregal: $(\frac{f(x)}{g(x)})' = \frac{f(x)'g(x)-g(x)'f(x)}{g(x)^2)}$ \\
+      			Kettenregel: 
+      			$(f(g(x)))' = f(g(x))'g(x)'$ \\
+      		 
+    			
      \section{Funktionen}
              \subsection{Monotonie}
                  Wenn $f(x) > f(y)$ für alle $x > y$ gilt, dann ist die Funktion monoton wachsend. \\
@@ -117,12 +144,7 @@
                   Wenn eine stetige Funktion vervielfacht wird, dann ist die resultierende Funktion wieder stetig. \\
                   \\
                   Jedes Polynom ist stetig und alle rationalen Funktionen in ihrem Definitonsbereich sind stetig.
-              \subsection{Differenzierbarkeit}
-                  Eine Funktion $f(x)$ ist differenzierbar an der Stelle $x*$, wenn der Grenzwert von $\limFromTo{x*}{x} \frac{f(x) - f(x*)}{x - x*}$ existiert. 
-                  \\ \\
-                  
-                  TODO: 11.6 - 11.8 und 11.10 einfügen
-                  
+                                    
               \subsection{Kurvendiskussion}
                   Eine Funktion hat einen Schnittpunkt mit der x-Achse, wenn die Gleichung $f(x) = 0$ Lösungen hat. \\
                   Eine Funktion hat einen Schnittpunkt mit der y-Achse, wenn die Gleichung $f(0)$ Lösungen hat.\\
@@ -136,6 +158,7 @@
                   Eine Funktion ist monoton fallend, wenn gilt, dass $f'(x) < 0$ ist. \\
                   Eine Funktion ist konkav, wenn gilt, dass $f''(x) < 0$.\\
                   Eine Funktion ist konvex, wenn gilt, dass $f''(x) > 0$.
+                   	 
     \section{Taylor-Reihe}
         Die allgemeine Form der Taylor-Reihe einer Funktion $f(x)$, welche mindestens n-mal differenzierbar ist, ist: \\
         $T_n(x) = \sum_{k=0}^{n} \frac{f^{(n)}(x*)}{k!}(x - x*)^k$.
