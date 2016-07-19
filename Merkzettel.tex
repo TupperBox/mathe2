@@ -1,0 +1,199 @@
+\documentclass[a4paper,landscape, 11pt]{article}
+
+\usepackage{multicol}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\geometry{
+    left=0.5cm,
+    right=0.5cm,
+    top=1cm,
+    bottom=1cm,
+    bindingoffset=5mm
+}
+
+\author{Johann Wagner}
+
+
+\newcommand{\limTo}[1]{ \lim\limits_{x \rightarrow #1}}
+\newcommand{\limFromTo}[2]{ \lim\limits_{#2 \rightarrow #1}}
+
+\newenvironment{alignTab}{$\begin{aligned}}{\end{aligned}$}
+
+\title{Mathe II - Klausurhilfe}
+
+\begin{document}
+    \begin{multicols}{4}
+        
+    
+    \begin{small}
+    \section{Determinanten, Eigenwerte, Eigenvektoren}
+        \subsection{Determinante}
+        A = $\left(
+        \begin{matrix}
+            2 & 3 \\
+            5 & 1
+        \end{matrix}
+        \right)$ \hspace{2pt} 
+        $det(A) = (2*1) - (5*3) = -13$ \\ \\
+        3x3-Matrix:\\
+        $det(B) = a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} - a_{13} a_{22} a_{31} - a_{11} a_{23} a_{32} - a_{12} a_{21} a_{33}$  
+        
+        \subsection{Eigenwert}
+        $det(A - E\lambda) = 
+        \left(
+        \begin{matrix}
+            2-\lambda & 3 \\
+            5 & 1-\lambda
+        \end{matrix}
+        \right) = (2-\lambda)(1-\lambda) - 5*3 = \lambda^2 - 3\lambda  + 2 - 15$\\
+        pq-Formel und gib ihm. 
+        
+        \subsection{Eigenvektor}
+        Für jeden Eigenwert kann man einen Eigenvektor aufstellen, indem man folgende Gleichung löst: \\
+        $ (A - \lambda_iE)*\vec{x} = 0$\\
+        $\vec{x}$ ist der Eigenvektor.
+        
+        \subsection{Eigenraum}
+        Die Kombination aller Eigenvektoren zu einer Matrix ergibt den Eigenraum.
+    \section{Folgen}
+    $a_n < a_(n+1) \rightarrow$ streng monoton steigend. \\
+    $a_n > a_(n+1) \rightarrow$ streng monoton fallend. \\ 
+    \\ 
+    Wenn es ein $C \in \mathbb{R}$ gibt, für das gilt, dass $a_n < C$, dann ist die Funktion nach Oben beschränkt. \\
+    Wenn es ein $c \in \mathbb{R}$ gibt, für das gilt, dass $a_n > c$, dann ist die Funktion nach Unten beschränkt. \\
+    Wenn es ein $m \in \mathbb{R}$ gibt, für das gilt, dass $ | a_n | < m$, dann ist die Funktion beschränkt.
+        
+        \subsection{Konvergenz und Divergenz}
+            
+            Eine Folge $a_n$ gilt als konvergent gegen $a \in \mathbb{R}$, wenn es für eine reelle Zahl $\epsilon > 0$ einen Folgeindex $n_0$ gibt, so dass die Folgeglieder $n>n_0$ in dem Intervall $\left[ a - \epsilon, a + \epsilon \right] $ liegt.\\
+            $\rightarrow | a_n - a | < \epsilon$
+            \\ \\
+            Eine Folge heißt konvergent, wenn es einen eindeutigen Grenzwert gibt. \\
+            Eine Folge heißt divergent, wenn sie nicht konvergiert. \\
+            Eine Folge heißt bestimmt divergent, wenn für die Folge $a_n$ gilt, dass $\limFromTo{\infty}{n}\frac{1}{a_n} = 0$ gilt. In diesem Fall konvergiert die Folge gegen $\infty$.
+    \section{Reihen}
+        \subsection{Partialsumme}
+            $\sum_{k=0}^{\infty} a_k = a_0 + a_1 + ... $
+        \subsection{Konvergenzkriterium}
+            \subsubsection{Leibnitz-Kriterium}
+                $\sum_{k=0}^{\infty} (-1)^k a_k$ konvergiert, wenn $a_k$ eine konvergierende Nullfolge, also gegen 0 konvergiert.        
+            \subsubsection{Majoranten- und Minoranten-Kriterium}
+                Wenn es eine konvergente Reihe $\sum_{k=0}^{\infty}b_k$ gibt und $a_k \le b_k$ für alle $k \ge k_0$ gilt, dann ist die Reihe $\sum_{k=0}^{\infty}a_k$ ebenfalls eine konvergente Reihe.
+                \\ \\
+                Wenn es eine divergente Reihe $\sum_{k=0}^{\infty}b_k$ gibt,  und $|a_k| \ge b_k \ge 0$ gilt, dann ist die Reihe $\sum_{k=0}^{\infty}$ ebenfalls eine divergente Reihe.
+            \subsubsection{Quotientenkriterium}
+                Wenn es eine Zahl $q < 1$ und ein $k_0 \ge \mathbb{N}_0$ gibt, so dass $\left|\frac{a_{k+1}}{a_k} \right| \le q$ für alle $k > k_0.$ \\
+                Wenn unter den gleichen Vorraussetzungen $\left|\frac{a_{k+1}}{a_k} \right| > 1$ gilt, dann ist die Reihe divergent.
+     \section{Funktionen}
+             \subsection{Monotonie}
+                 Wenn $f(x) > f(y)$ für alle $x > y$ gilt, dann ist die Funktion monoton wachsend. \\
+                 Wenn $f(x) < f(y)$ für alle $x < y$ gilt, dann ist die Funktion monoton fallend. \\
+                 Wenn eine Bedingung nur "$\le$" oder "$\ge$" ist, dann fällt das monoton weg.
+                 
+             \subsection{Ungerade und gerade Funktionen}
+                 Wenn gilt, dass $f(x) = f(-x)$ ist, dann ist die Funktion gerade. \\
+                 Wenn gilt, dass $f(-x) = -f(x)$ ist, dann ist die Funktion ungerade.
+              
+              \subsection{Grenzwerte}
+                  Grenzwerte von Funktionen werden über den $\lim$ gebildet.
+                  Rechtsseitiger Grenzwert wird über die rechte Seite angenährt. \\
+                  Notierung: $\limFromTo{x*^+}{x}$ \\ 
+                  \\
+                  Linksseitiger Grenzwert wird über die linke Seite angenährt. \\
+                  Notierung: $\limFromTo{x*^-}{x}$ \\ 
+                  \\
+                  Asymptotisches Verhalten wird als Grenzwert einer Funktion gegen $\pm \infty$ definiert.
+              \subsection{Stetigkeit}
+                  Eine Funktion ist an der Stelle $x*$ stetig, wenn gilt:\\
+                  $\limFromTo{x*+}{x} f(x) = \limFromTo{x*-}{x} f(x) = f(x*)$
+                  \\ \\
+                  Wird eine stetige Funktion mit einer anderen stetigen Funktion addiert, subtrahiert, multipliziert oder diviert, dann ist die resultierende Funktion ebenfalls stetig.\\
+                  Wenn eine stetige Funktion vervielfacht wird, dann ist die resultierende Funktion wieder stetig. \\
+                  \\
+                  Jedes Polynom ist stetig und alle rationalen Funktionen in ihrem Definitonsbereich sind stetig.
+              \subsection{Differenzierbarkeit}
+                  Eine Funktion $f(x)$ ist differenzierbar an der Stelle $x*$, wenn der Grenzwert von $\limFromTo{x*}{x} \frac{f(x) - f(x*)}{x - x*}$ existiert. 
+                  \\ \\
+                  
+                  TODO: 11.6 - 11.8 und 11.10 einfügen
+                  
+              \subsection{Kurvendiskussion}
+                  Eine Funktion hat einen Schnittpunkt mit der x-Achse, wenn die Gleichung $f(x) = 0$ Lösungen hat. \\
+                  Eine Funktion hat einen Schnittpunkt mit der y-Achse, wenn die Gleichung $f(0)$ Lösungen hat.\\
+                  Eine Funktion hat einen Extrempunkt, wenn die Gleichung $f(x)' = 0$ Lösungen hat. \\
+                  Für jede Extremstelle $x_i$ kann ermittelt werden, ob diese ein Hochpunkt oder Tiefpunkt beschreibt.\\
+                  Wenn $f''(x_i) > 0$ ist, dann ist es ein Tiefpunkt.\\
+                  Wenn $f''(x_i) < 0$ ist, dann ist es ein Hochpunkt. \\
+                  Eine Funktion hat einen Wendepunkt, wenn die Gleichung $f''(x) = 0$ Lösungen hat und gilt, dass $f'''(x_i) \neq 0$. \\
+                  Eine Funktion hat einen Sattelpunkt, wenn die Gleichung $f''(x) = 0$ Lösungne hat und gilt, dass $f'''(x) = 0$. \\
+                  Eine Funktion ist monoton steigend, wenn gilt, dass $f'(x) > 0$ ist. \\
+                  Eine Funktion ist monoton fallend, wenn gilt, dass $f'(x) < 0$ ist. \\
+                  Eine Funktion ist konkav, wenn gilt, dass $f''(x) < 0$.\\
+                  Eine Funktion ist konvex, wenn gilt, dass $f''(x) > 0$.
+    \section{Taylor-Reihe}
+        Die allgemeine Form der Taylor-Reihe einer Funktion $f(x)$, welche mindestens n-mal differenzierbar ist, ist: \\
+        $T_n(x) = \sum_{k=0}^{n} \frac{f^{(n)}(x*)}{k!}(x - x*)^k$.
+        \\ \\
+        $T_1(x)$ ist die Tangente an der Stelle $x*$.
+        Das Restglied $R_n$ wird durch Differenz der Funktion und dem Taylorpolynom gebildet. $R_n(x) = f(x) - T_n(x)$
+        
+    \section{Integralrechnung}
+        TODO: Einfügen 13.24
+        
+        \subsection{Partielle Integration}
+        Wenn $u$ und $v$ zwei differenzierbare Funktionen sind, dann gilt: \\
+        $\int u' * v = (u * v) - \int u * v'$
+        \subsection{Substitutionsregel}
+        $\int f(g(x)) * g'(x) dx = \int f(y) dy$
+        \\ \\
+        \begin{align}
+            \int \frac{1}{5x - 7} dx &= ?\\
+            z &= 5x - 7 \\
+            \frac{dz}{dx} &= 5 \\   
+            \frac{dz}{5} &= dx  \\
+            \int \frac{1 * dz}{z * 5} &= \frac{1}{5} \int \frac{1}{z} dz \\
+                                      &= \frac{1}{5} ln(z) \\
+                                      &= \frac{1}{5} ln(5x-7)
+        \end{align}
+    \section{Multidimensionale Funktionen}
+        Eine multidimensionale Funktion ist eine Funktion mit mehr als einer Variable.\\
+       $f(x,y) = x^2 + 3xy$  
+       
+       \subsection{Partielle Ableitung}
+       Eine partielle Ableitung ist die Ableitung zu einer Variablen.\\
+       $f_x(x,y) = 2x + 3y$ \\
+       $f_y(x,y) = 3$ \\
+       Zweite partielle Ableitung: \\
+       $f_{xx}(x,y) = 2$ , 
+       $f_{xy}(x,y) = 3$ \\
+       $f_{yx}(x,y) = 0$ ,
+       $f_{yy}(x,y) = 0$ 
+       \subsection{Gradient}
+       gradient(f) = $((2x + 3y), (3))$ \\
+       Man kann eine Stelle einsetzen für x und y:\\
+       gradient(f(3,2)) = $(12, 3)$.
+       
+       \subsection{Hesse-Matrix - tolles Ding..}
+       $H_f(x) = \left( 
+       \begin{matrix}
+       f_{xx}(x) & f_{xy}(x) \\
+       f_{yx}(x) & f_{yy}(x)
+       \end{matrix}
+       \right)
+       $
+       
+       \subsection{Extrema}
+       Zum Bestimmen der Extrema ist das Aufstellen der Hesse-Matrix notwendig.
+       Dazu sind die Stellen, an den der Gradient 0 wird, die sogenannten kritischen Stellen. Wir setzen die kritischen Stellen in die Hesse-Matrix ein und bestimmen die Bestimmtheit der Matrix. Dazu bilden wir die Eigenwerte. \\
+       Alle Eigenwerte $>$ 0, dann Minimum.\\
+       Alle Eigenwerte $<$ 0, dann Maximum.
+
+\end{small}
+\end{multicols}
+\end{document}
