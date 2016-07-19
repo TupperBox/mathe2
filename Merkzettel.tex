@@ -32,6 +32,29 @@
         
     
     \begin{small}
+    \section{Allgemeines}
+        \begin{multicols}{2}
+        $a^m \cdot a^n = a^{m+n}$\\
+        $a^n \cdot b^n = (ab)^n$\\
+        $\frac{a^n}{a^m} = a^{n-m}$\\
+        $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$\\
+        $(a^n)^m = a^{mn}$\\
+        $a^{-n} = \frac{1}{a^n}$\\
+        $log_b(1) = 0$
+        \end{multicols}
+        \noindent
+        $x = log_a(y) \Leftrightarrow y = a^x$\\
+        $log(x) + log(y) = log(xy)$\\
+        $log(x) - log(y) = log(\frac{x}{y})$\\
+        $log_a(x) = \frac{log_b(x)}{log_b(a)}$  \\
+        $log(u^r) = r \cdot ln(u)$
+        \begin{multicols}{2}
+        \noindent
+        $ln(1) = 0$ \\
+        $ln(e) = 1$ \\
+        $ln(e^x) = x$ \\
+        $e^{ln(x)} = x$
+        \end{multicols}
     \section{Determinanten, Eigenwerte, Eigenvektoren}
         \subsection{Determinante}
         A = $\left(
@@ -125,7 +148,9 @@
                  
              \subsection{Ungerade und gerade Funktionen}
                  Wenn gilt, dass $f(x) = f(-x)$ ist, dann ist die Funktion gerade. \\
-                 Wenn gilt, dass $f(-x) = -f(x)$ ist, dann ist die Funktion ungerade.
+                 Daraus folgt, dass die Funktion achsensymetrisch zur y-Achse ist.\\
+                 Wenn gilt, dass $f(-x) = -f(x)$ ist, dann ist die Funktion ungerade.\\
+                 Daraus folgt, dass die Funktion punktsymetrisch zum Ursprung ist.
               
               \subsection{Grenzwerte}
                   Grenzwerte von Funktionen werden über den $\lim$ gebildet.
@@ -146,18 +171,17 @@
                   Jedes Polynom ist stetig und alle rationalen Funktionen in ihrem Definitonsbereich sind stetig.
                                     
               \subsection{Kurvendiskussion}
-                  Eine Funktion hat einen Schnittpunkt mit der x-Achse, wenn die Gleichung $f(x) = 0$ Lösungen hat. \\
-                  Eine Funktion hat einen Schnittpunkt mit der y-Achse, wenn die Gleichung $f(0)$ Lösungen hat.\\
-                  Eine Funktion hat einen Extrempunkt, wenn die Gleichung $f(x)' = 0$ Lösungen hat. \\
-                  Für jede Extremstelle $x_i$ kann ermittelt werden, ob diese ein Hochpunkt oder Tiefpunkt beschreibt.\\
-                  Wenn $f''(x_i) > 0$ ist, dann ist es ein Tiefpunkt.\\
-                  Wenn $f''(x_i) < 0$ ist, dann ist es ein Hochpunkt. \\
-                  Eine Funktion hat einen Wendepunkt, wenn die Gleichung $f''(x) = 0$ Lösungen hat und gilt, dass $f'''(x_i) \neq 0$. \\
-                  Eine Funktion hat einen Sattelpunkt, wenn die Gleichung $f''(x) = 0$ Lösungne hat und gilt, dass $f'''(x) = 0$. \\
-                  Eine Funktion ist monoton steigend, wenn gilt, dass $f'(x) > 0$ ist. \\
-                  Eine Funktion ist monoton fallend, wenn gilt, dass $f'(x) < 0$ ist. \\
-                  Eine Funktion ist konkav, wenn gilt, dass $f''(x) < 0$.\\
-                  Eine Funktion ist konvex, wenn gilt, dass $f''(x) > 0$.
+                  Schnittpunkt x-Achse: $f(x) = 0$ \\
+                  Schnittpunkt y-Achse:  $f(0) = ...$\\
+                  Extremstelle: $f(x)' = 0$  \\
+                  $f''(x_i) > 0$ $\rightarrow$ Tiefpunkt.\\
+                  $f''(x_i) < 0$ $\rightarrow$ Hochpunkt. \\
+                  Wendepunkt: $f''(x) = 0$ und $f'''(x_i) \neq 0$. \\
+                  Sattelpunkt: $f''(x) = 0$ und $f'''(x) = 0$. \\
+                  Monoton steigend: $f'(x) > 0$ \\
+                  Monoton fallend: $f'(x) < 0$ \\
+                  Konkav: $f''(x) < 0$.\\
+                  Konvex: $f''(x) > 0$.
                    	 
     \section{Taylor-Reihe}
         Die allgemeine Form der Taylor-Reihe einer Funktion $f(x)$, welche mindestens n-mal differenzierbar ist, ist: \\
@@ -167,7 +191,21 @@
         Das Restglied $R_n$ wird durch Differenz der Funktion und dem Taylorpolynom gebildet. $R_n(x) = f(x) - T_n(x)$
         
     \section{Integralrechnung}
-        TODO: Einfügen 13.24
+        $e^{Foo}$ u.ä. muss vorher substituiert werden!\\
+        
+        $
+        \begin{matrix}
+        \text{Funktion} & \text{Ableitung} \\
+        c & c \cdot x \\
+        x^a, a \neq -1 & \frac{x^{a+1}}{a+1}\\
+        x^{-1}, x \neq 0 & ln(|x|)\\
+        e^x & e^x \\
+        a^x & \frac{a^x}{ln(a)} \\
+        sin(x) & -cos(x)\\
+        cos(x) & sin(x)
+        \end{matrix}
+        $
+        
         
         \subsection{Partielle Integration}
         Wenn $u$ und $v$ zwei differenzierbare Funktionen sind, dann gilt: \\
