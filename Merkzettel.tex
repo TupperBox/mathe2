@@ -33,28 +33,36 @@
     
     \begin{small}
     \section{Allgemeines}
-        \begin{multicols}{2}
-        $a^m \cdot a^n = a^{m+n}$\\
-        $a^n \cdot b^n = (ab)^n$\\
-        $\frac{a^n}{a^m} = a^{n-m}$\\
-        $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$\\
-        $(a^n)^m = a^{mn}$\\
-        $a^{-n} = \frac{1}{a^n}$\\
-        $log_b(1) = 0$
-        \end{multicols}
-        \noindent
-        $x = log_a(y) \Leftrightarrow y = a^x$\\
-        $log(x) + log(y) = log(xy)$\\
-        $log(x) - log(y) = log(\frac{x}{y})$\\
-        $log_a(x) = \frac{log_b(x)}{log_b(a)}$  \\
-        $log(u^r) = r \cdot ln(u)$
-        \begin{multicols}{2}
-        \noindent
-        $ln(1) = 0$ \\
-        $ln(e) = 1$ \\
-        $ln(e^x) = x$ \\
-        $e^{ln(x)} = x$
-        \end{multicols}
+        \subsection{Potenzgesetze}
+            \begin{multicols}{2}
+            $a^m \cdot a^n = a^{m+n}$\\
+            $a^n \cdot b^n = (ab)^n$\\
+            $\frac{a^n}{a^m} = a^{n-m}$\\
+            $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$\\
+            $(a^n)^m = a^{mn}$\\
+            $a^{-n} = \frac{1}{a^n}$\\
+            $log_b(1) = 0$
+            \end{multicols}
+         \subsection{Logarithmus-Gesetze}
+            \noindent
+            $x = log_a(y) \Leftrightarrow y = a^x$\\
+            $log(x) + log(y) = log(xy)$\\
+            $log(x) - log(y) = log(\frac{x}{y})$\\
+            $log_a(x) = \frac{log_b(x)}{log_b(a)}$  \\
+            $log(u^r) = r \cdot ln(u)$
+            \begin{multicols}{2}
+            \noindent
+            $ln(1) = 0$ \\
+            $ln(e) = 1$ \\
+            $ln(e^x) = x$ \\
+            $e^{ln(x)} = x$
+            \end{multicols}
+        \subsection{Komplexe Zahlen}
+        $(a + bi) \pm (c + di) = (a \pm c) + (c \pm d)i$\\
+        $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$\\
+    
+        $\displaystyle \frac{a + bi}{c + di} = \frac{ac + bd}{c^2 + d^2} + \frac{cb - ad}{c^2 + d^2}i$
+    
     \section{Determinanten, Eigenwerte, Eigenvektoren}
         \subsection{Determinante}
         A = $\left(
@@ -84,6 +92,15 @@
         
         \subsection{Eigenraum}
         Die Kombination aller Eigenvektoren zu einer Matrix ergibt den Eigenraum.
+        \subsection{Diagonalmatrix}
+        $D=\begin{pmatrix}
+        \lambda_1 & 0 & 0 \\
+        0 & \lambda_2 & 0 \\
+        0 & 0 & \lambda_3 
+        \end{pmatrix}$
+        \subsection{Ähnliche Matrizen}
+        Zwei Matrizen $A, B$ sind sich ähnlich, wenn es eine Matrix $S$gibt, dass gilt: \\
+        $S\cdot B = A \cdot S$
     \section{Folgen}
     $a_n < a_(n+1) \rightarrow$ streng monoton steigend. \\
     $a_n > a_(n+1) \rightarrow$ streng monoton fallend. \\ 
