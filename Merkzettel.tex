@@ -75,6 +75,25 @@
         3x3-Matrix:\\
         $det(B) = a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} - a_{13} a_{22} a_{31} - a_{11} a_{23} a_{32} - a_{12} a_{21} a_{33}$  
         
+        \subsubsection{Gauss}
+        Wenn eine Matrix in Dreiecksform ist, dann kann ihre Determinante an ihrer Hauptdiagonalen abgelesen werden. \\
+        Wenn eine Zeile der Matrix multipliziert wird, muss die Determinante mit dem Kehrwert multipliziert werden.\\
+        
+        $G = \begin{pmatrix}
+            1 & 2 & 3 \\
+            0 & 2 & 1 \\
+            0 & 0 & 3
+        \end{pmatrix}
+        \hspace{10pt}
+        G' = \begin{pmatrix}
+        
+        2 & 4 & 6 \\
+        0 & 2 & 1 \\
+        0 & 0 & 3
+        \end{pmatrix}
+        $
+        \\
+        $\rightarrow det(G) = \frac{1}{2} det(G')$
         \subsection{Eigenwert}
         $det(A - E\lambda) = 
         \left(
@@ -213,7 +232,7 @@
         
         $
         \begin{matrix}
-        \text{Funktion} & \text{Ableitung} \\
+        \text{Funktion} & \text{Aufleitung} \\
         c & c \cdot x \\
         x^a, a \neq -1 & \frac{x^{a+1}}{a+1}\\
         x^{-1}, x \neq 0 & ln(|x|)\\
@@ -230,7 +249,6 @@
         $\int u' * v = (u * v) - \int u * v'$
         \subsection{Substitutionsregel}
         $\int f(g(x)) * g'(x) dx = \int f(y) dy$
-        \\ \\
         \begin{align}
             \int \frac{1}{5x - 7} dx &= ?\\
             z &= 5x - 7 \\
@@ -254,9 +272,9 @@
        $f_{yx}(x,y) = 0$ ,
        $f_{yy}(x,y) = 0$ 
        \subsection{Gradient}
-       gradient(f) = $((2x + 3y), (3))$ \\
+       $grad_f(x,y) = ((2x + 3y), (3))$ \\
        Man kann eine Stelle einsetzen für x und y:\\
-       gradient(f(3,2)) = $(12, 3)$.
+       $grad_f(3,2)= (12, 3)$.
        
        \subsection{Hesse-Matrix - tolles Ding..}
        $H_f(x) = \left( 
