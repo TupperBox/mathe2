@@ -9,6 +9,16 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{geometry}
+\usepackage{mathptmx}
+\usepackage{paralist}
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{2ex}{1ex}
+\titlespacing{\subsection}{0pt}{1ex}{0ex}
+\titlespacing{\subsubsection}{0pt}{0.5ex}{0ex}
+\setlength\parindent{0pt}
+
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
 \geometry{
     left=0.5cm,
     right=0.5cm,
@@ -17,7 +27,8 @@
     bindingoffset=5mm
 }
 
-\author{Johann Wagner, Kai Seidensticker}
+
+\author{Johann Wagner, Kai Seidensticker, Jasper Orschulko}
 
 
 \newcommand{\limTo}[1]{ \lim\limits_{x \rightarrow #1}}
@@ -28,11 +39,25 @@
 \title{Mathe II - Klausurhilfe}
 
 \begin{document}
-    \begin{multicols}{4}
-        
-    
+    \begin{multicols}{5}
     \begin{small}
     \section{Allgemeines}
+    	\subsection{Gruppen}
+    	Brauchen:
+    	
+    	\begin{compactitem}
+    		\item {Assoziativität: $a\circ(b\circ c)=(a\circ b)\circ c$}
+    		\item {neutrales Element: $\exists e\in G, a\circ e=a$}
+    		\item {inverses Element: $\exists a^{-1}\in G, a\circ a^{-1}=e$}
+    		\item {Kommutativität: $a\circ b=b\circ a$}
+    	\end{compactitem}
+    	\subsubsection{Untergruppen}
+    	Brauchen:
+    	
+    	\begin{compactitem}   		
+    		\item {$U\subseteq G$}
+    		\item {U ist eine Gruppe (siehe Gruppe)}
+    	\end{compactitem}
         \subsection{Potenzgesetze}
             \begin{multicols}{2}
             $a^m \cdot a^n = a^{m+n}$\\
@@ -62,6 +87,23 @@
         $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$\\
     
         $\displaystyle \frac{a + bi}{c + di} = \frac{ac + bd}{c^2 + d^2} + \frac{cb - ad}{c^2 + d^2}i$
+        \subsection{Nett to know}
+        \begin{compactitem}
+        \item {$e^x$ hat keine Nullstelle}
+        \item {$\log(\sqrt{x}) = \frac{\log(x)}{2}$}
+        \item {$\log_a(b)=c \rightarrow a^c=b$}
+        \item {$\log_x(b^x)=x$}
+        \end{compactitem}
+    \section{Permutationen}
+    Ausführliche Darstellung: $\pi_1=\binom{1\ 2\ 3\ 4\ 5}{3\ 2\ 1\ 5\ 4}$
+    
+    Zyklische Darstellung:$\pi_1=(13)(45)$
+    
+    Komposition von Hinten anfangen:
+    
+    e.g. $\pi_1\circ\pi_2=(13)(45)\circ(2534)=(34521)$
+    
+    Bei $\pi^{-1}$: Zeilen vertauschen.
     
     \section{Determinanten, Eigenwerte, Eigenvektoren}
         \subsection{Determinante}
@@ -102,7 +144,7 @@
             5 & 1-\lambda
         \end{matrix}
         \right) = (2-\lambda)(1-\lambda) - 5*3 = \lambda^2 - 3\lambda  + 2 - 15$\\
-        pq-Formel und gib ihm. 
+        pq-Formel und gib ihm: $-\frac{p}{2}\pm\sqrt{(\frac{p}{2})^2-q}$
         
         \subsection{Eigenvektor}
         Für jeden Eigenwert kann man einen Eigenvektor aufstellen, indem man folgende Gleichung löst: \\
@@ -140,34 +182,40 @@
             Hospital kann angewendet werden bei: \\
             $\frac{0}{0}, 0 \cdot \infty, \infty - \infty, \frac{\infty}{\infty}, 0^0, \infty^0, 1^\infty$\\
             Wenn kein Quotient gegeben ist, muss dieser durch Umformung erreicht werden - in Übung nicht behandelt.
+            
+            $\limFromTo{x0}{x} \frac{f'(x)}{g'(x)} = c \rightarrow \limFromTo{x0}{x} \frac{f(x)}{g(x)} = c$
+            
     
     \section{Reihen}
         \subsection{Partialsumme}
             $\sum_{k=0}^{\infty} a_k = a_0 + a_1 + ... $
         \subsection{Konvergenzkriterium}
             \subsubsection{Leibnitz-Kriterium}
-                $\sum_{k=0}^{\infty} (-1)^k a_k$ konvergiert, wenn $a_k$ eine konvergierende Nullfolge, also gegen 0 konvergiert.        
+                \noindent$\sum_{k=0}^{\infty} (-1)^k a_k$ konvergiert, wenn $a_k$ eine konvergierende Nullfolge, also gegen 0 konvergiert.        
             \subsubsection{Majoranten- und Minoranten-Kriterium}
                 Wenn es eine konvergente Reihe $\sum_{k=0}^{\infty}b_k$ gibt und $a_k \le b_k$ für alle $k \ge k_0$ gilt, dann ist die Reihe $\sum_{k=0}^{\infty}a_k$ ebenfalls eine konvergente Reihe.
                 \\ \\
                 Wenn es eine divergente Reihe $\sum_{k=0}^{\infty}b_k$ gibt,  und $|a_k| \ge b_k \ge 0$ gilt, dann ist die Reihe $\sum_{k=0}^{\infty}$ ebenfalls eine divergente Reihe.
+                
+                $\frac{1}{2}$ ist divergent.
+                
+                $\frac{1}{k^x}$ ist konvergent.
             \subsubsection{Quotientenkriterium}
                 Wenn es eine Zahl $q < 1$ und ein $k_0 \ge \mathbb{N}_0$ gibt, so dass $\left|\frac{a_{k+1}}{a_k} \right| \le q$ für alle $k > k_0.$ \\
                 Wenn unter den gleichen Vorraussetzungen $\left|\frac{a_{k+1}}{a_k} \right| > 1$ gilt, dann ist die Reihe divergent.
     \section{Differenzialrechnung}
     	\subsection{Differenzierbarkeit}
-                  Eine Funktion $f(x)$ ist differenzierbar an der Stelle $x*$, wenn der Grenzwert von $\limFromTo{x*}{x} \frac{f(x) - f(x*)}{x - x*}$ existiert. 
-                  \\ \\
+                  Eine Funktion $f(x)$ ist differenzierbar an der Stelle $x*$, wenn der Grenzwert von $\limFromTo{x*}{x} \frac{f(x) - f(x*)}{x - x*}$ existiert.
     	\subsection{typische Ableitungen}
     	   \begin{multicols}{2}		
     	   		$(x)' = 1$ \\
     			$(ax)' = a$ \\
     			$(ax^2)' = 2ax$ \\
-    			$(\frac{1}{x})' = \frac{1}{x^2}$ \\
+    			$(\frac{1}{x})' = -\frac{1}{x^2}$ \\
     			$(\sqrt[]{x})' = \frac{1}{2\sqrt[]{x}}$ \\
     			$(ax^b)' = abx^(b-1)$ \\
     			$(e^x)' = e^x $ \\
-    			$(a^x)' = aloga $ \\
+    			$(a^x)' = a^x*log(a) $ \\
     			$ln(x)' = \frac{1}{x}$ \\
     		 	$(\sin x) = \cos x$ \\
     		 	$(\cos x) = -\sin x$ \\
@@ -175,12 +223,10 @@
     		 	\end{multicols}
       \subsection{Verknüpfungsfunktionen}
       			Summenregel: $(f(x) + g(x))' = f(x)' + g(x)' $ \\ 
-      			Produktregel: $(f(x)g(x))' = f(x)'g(x)+g(x)'f(x)' $ \\
-      			Quotientenregal: $(\frac{f(x)}{g(x)})' = \frac{f(x)'g(x)-g(x)'f(x)}{g(x)^2)}$ \\
+      			Produktregel: $(f(x)g(x))' = f(x)'g(x)+g(x)'f(x) $ \\
+      			Quotientenregel: $(\frac{f(x)}{g(x)})' = \frac{f(x)'g(x)-g(x)'f(x)}{g(x)^2}$ \\
       			Kettenregel: 
       			$(f(g(x)))' = f(g(x))'g(x)'$ \\
-      		 
-    			
      \section{Funktionen}
              \subsection{Monotonie}
                  Wenn $f(x) > f(y)$ für alle $x > y$ gilt, dann ist die Funktion monoton wachsend. \\
@@ -209,34 +255,49 @@
                   Wird eine stetige Funktion mit einer anderen stetigen Funktion addiert, subtrahiert, multipliziert oder diviert, dann ist die resultierende Funktion ebenfalls stetig.\\
                   Wenn eine stetige Funktion vervielfacht wird, dann ist die resultierende Funktion wieder stetig. \\
                   \\
-                  Jedes Polynom ist stetig und alle rationalen Funktionen in ihrem Definitonsbereich sind stetig.
+                  Jedes Polynom ist stetig und alle rationalen Funktionen in ihrem Definitionsbereich sind stetig.
                                     
               \subsection{Kurvendiskussion}
-                  Schnittpunkt x-Achse: $f(x) = 0$ \\
-                  Schnittpunkt y-Achse:  $f(0) = ...$\\
-                  Extremstelle: $f(x)' = 0$  \\
+              \noindent
+             	  Schnittpunkt x-Achse: $f(x) = 0$ \\
+              	  Schnittpunkt y-Achse:  $f(0) = ...$\\
+              	  $\bullet$Def.bereich z.B. $f(x)= \frac{1}{x} \rightarrow D_f={\rm I\!R}\backslash \{0\}$\\
+              	  $\bullet$Nullstellen: pq-Formel (bei 3 unbek. Raten.)\\
+                  $\bullet$\ Extremstellen: $f'(x) = 0$  \\
                   $f''(x_i) > 0$ $\rightarrow$ Tiefpunkt.\\
                   $f''(x_i) < 0$ $\rightarrow$ Hochpunkt. \\
                   Wendepunkt: $f''(x) = 0$ und $f'''(x_i) \neq 0$. \\
                   Sattelpunkt: $f''(x) = 0$ und $f'''(x) = 0$. \\
+                  $\bullet$Verhalten im Unendlichen $\rightarrow \lim$ für + und - Unendlich.\\
                   Monoton steigend: $f'(x) > 0$ \\
                   Monoton fallend: $f'(x) < 0$ \\
                   Konkav: $f''(x) < 0$.\\
-                  Konvex: $f''(x) > 0$.
+                  Konvex: $f''(x) > 0$.\\
+                  Positiv Definit: $\forall\lambda>0 \rightarrow$ Minimum\\
+                  Negativ Definit: $\forall\lambda<0 \rightarrow$ Maximum\\
+                  indefinit $\rightarrow$ Sattelpunkt\\
+                  semidefinit $\rightarrow$ B um A\\
+              
+                  
+                  
+                  
+                  
                    	 
     \section{Taylor-Reihe}
         Die allgemeine Form der Taylor-Reihe einer Funktion $f(x)$, welche mindestens n-mal differenzierbar ist, ist: \\
-        $T_n(x, x_e) = \sum_{k=0}^{n} \frac{f^{(n)}(x_e)}{k!}(x - x_e)^k$.
+        $T_n(x, x_e) = \sum_{k=0}^{n} \frac{f^{(k)}(x_e)}{k!}(x - x_e)^k$.
         \\ \\
         $T_1(x)$ ist die Tangente an der Stelle $x*$.
         Das Restglied $R_n$ wird durch Differenz der Funktion und dem Taylorpolynom gebildet. $R_n(x) = f(x) - T_n(x)$
         $R_n(x,x_ne) = \frac{f^{n+1}(c)}{(n+1)!}*(x-x_e)^{n+1} $
         
     \section{Integralrechnung}
+    	$\int_a^b f(x)dx = [F(x)]_a^b = F(b) -F(a)$\\
+    	$F'(x)=f(x)$
+    	
+    	
         $e^{Foo}$ u.ä. muss vorher substituiert werden!\\
-        
-        $
-        \begin{matrix}
+        $\begin{matrix}
         \text{Funktion} & \text{Aufleitung} \\
         c & c \cdot x \\
         x^a, a \neq -1 & \frac{x^{a+1}}{a+1}\\
@@ -245,8 +306,7 @@
         a^x & \frac{a^x}{ln(a)} \\
         sin(x) & -cos(x)\\
         cos(x) & sin(x)
-        \end{matrix}
-        $
+        \end{matrix}$
         
         
         \subsection{Partielle Integration}
@@ -277,11 +337,23 @@
        $f_{yx}(x,y) = 0$ ,
        $f_{yy}(x,y) = 0$ 
        \subsection{Gradient}
+       Gradient besteht aus der ersten Ableitung.
        $grad_f(x,y) = ((2x + 3y), (3))$ \\
        Man kann eine Stelle einsetzen für x und y:\\
        $grad_f(3,2)= (12, 3)$.
+              
+       \subsection{Extremstellen mehrdimen. Funkt.}
+       Zum Bestimmen der Extremstellen ist das Aufstellen der Hesse-Matrix notwendig.
+       Dazu sind die Stellen, an den der Gradient 0 wird, die sogenannten kritischen Stellen. Wir setzen die kritischen Stellen in die Hesse-Matrix ein und bestimmen die Bestimmtheit der Matrix. Dazu bilden wir die Eigenwerte (über Determinante).\\
        
-       \subsection{Hesse-Matrix - tolles Ding..}
+       \noindent
+       $(\det>0) \land (W_{xx} \lor W_{yy})<0 \rightarrow$ Max.\\
+       $(\det>0) \land (W_{xx} \lor W_{yy})>0 \rightarrow$ Min.\\
+       $\det<0 \rightarrow$ Sattelp.\\
+       $\det=0 \rightarrow$ k.A.
+       
+       
+              \subsection{Hesse-Matrix - tolles Ding..}
        $H_f(x) = \left( 
        \begin{matrix}
        f_{xx}(x) & f_{xy}(x) \\
@@ -290,12 +362,22 @@
        \right)
        $
        
-       \subsection{Extrema}
-       Zum Bestimmen der Extrema ist das Aufstellen der Hesse-Matrix notwendig.
-       Dazu sind die Stellen, an den der Gradient 0 wird, die sogenannten kritischen Stellen. Wir setzen die kritischen Stellen in die Hesse-Matrix ein und bestimmen die Bestimmtheit der Matrix. Dazu bilden wir die Eigenwerte. \\
-       Alle Eigenwerte $>$ 0, dann Minimum.\\
-       Alle Eigenwerte $<$ 0, dann Maximum.
-
+    \end{small}
+    \end{multicols}
+	\begin{small}
+	\begin{multicols}{2}
+		\section{Sin. Cos. Tan. Tabelle}
+       \begin{tabular}{l | c  c  c  c  c  c  c  c  c  c }
+       	\noindent
+       	$x$ & $0$ & $\frac{1}{6}\pi$ & $\frac{1}{4}\pi$ & $\frac{1}{3}\pi$ & $\frac{1}{2}\pi$ & $\frac{2}{3}\pi$ & $\frac{3}{4}\pi$ & $\frac{5}{6}\pi$ & $\pi$ & $\frac{7}{6}\pi$\\\hline
+       	$Grad$ & $0$ & $30$ & $45$ & $60$ & $90$ & $120$ & $135$ & $150$ & $180$ & $210$\\\hline
+       	$\sin$ & $0$ & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & $0$ & $-\frac{1}{2}$\\\hline
+       	$\cos$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & $0$ & $-\frac{1}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{\sqrt{3}}{2}$ & $-1$ & $-\frac{\sqrt{3}}{2}$\\\hline
+       	$\tan$ & $0$ & $\frac{\sqrt{3}}{3}$ & $1$ & $\sqrt{3}$ &$\pm\infty$ & $-\sqrt{3}$ & $-1$ & $-\frac{\sqrt{3}}{3}$ & $0$ & $\frac{\sqrt{3}}{3}$
+       	
+       	
+       \end{tabular}
+    
+    \end{multicols}
 \end{small}
-\end{multicols}
 \end{document}
